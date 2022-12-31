@@ -10,32 +10,32 @@ if(isset($_SESSION['user_id'])){
    $user_id = '';
 };
 
-if(isset($_POST['send'])){
+// if(isset($_POST['send'])){
 
-   $name = $_POST['name'];
-   $name = filter_var($name, FILTER_SANITIZE_STRING);
-   $email = $_POST['email'];
-   $email = filter_var($email, FILTER_SANITIZE_STRING);
-   $number = $_POST['number'];
-   $number = filter_var($number, FILTER_SANITIZE_STRING);
-   $msg = $_POST['msg'];
-   $msg = filter_var($msg, FILTER_SANITIZE_STRING);
+//    $name = $_POST['name'];
+//    $name = filter_var($name, FILTER_SANITIZE_STRING);
+//    $email = $_POST['email'];
+//    $email = filter_var($email, FILTER_SANITIZE_STRING);
+//    $number = $_POST['number'];
+//    $number = filter_var($number, FILTER_SANITIZE_STRING);
+//    $msg = $_POST['msg'];
+//    $msg = filter_var($msg, FILTER_SANITIZE_STRING);
 
-   $select_message = $conn->prepare("SELECT * FROM `messages` WHERE name = ? AND email = ? AND number = ? AND message = ?");
-   $select_message->execute([$name, $email, $number, $msg]);
+//    $select_message = $conn->prepare("SELECT * FROM `messages` WHERE name = ? AND email = ? AND number = ? AND message = ?");
+//    $select_message->execute([$name, $email, $number, $msg]);
 
-   if($select_message->rowCount() > 0){
-      $message[] = 'already sent message!';
-   }else{
+//    if($select_message->rowCount() > 0){
+//       $message[] = 'already sent message!';
+//    }else{
 
-      $insert_message = $conn->prepare("INSERT INTO `messages`(user_id, name, email, number, message) VALUES(?,?,?,?,?)");
-      $insert_message->execute([$user_id, $name, $email, $number, $msg]);
+//       $insert_message = $conn->prepare("INSERT INTO `messages`(user_id, name, email, number, message) VALUES(?,?,?,?,?)");
+//       $insert_message->execute([$user_id, $name, $email, $number, $msg]);
 
-      $message[] = 'sent message successfully!';
+//       $message[] = 'sent message successfully!';
 
-   }
+//    }
 
-}
+// }
 
 
 ?>
@@ -53,13 +53,54 @@ if(isset($_POST['send'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/contact.css">
+
 
 </head>
 <body>
    
 <?php include 'components/user_header.php'; ?>
+<section>
+<h2 class="title">Get in touch</h2>
+<br>
+<img class="cimg" src="images/contactimg.png" alt="">
+</section>
+<br>
 
-<section class="contact">
+
+<section >
+<div class="container-page">
+   
+   
+         <div class="adress details">
+         <i class="fas fa-map-marker-alt conticon"></i>
+         <br><br>
+         <div class="topic">Adress</div> 
+         <div class="text-one">Jorden</div>
+         </div>
+
+
+
+         <div class="phone details">
+         <i class="fas fa-phone-alt conticon"></i>
+         <br><br>
+         <div class="topic">Phone</div> 
+         <div class="text-one">0771234567</div>
+         </div>
+
+
+         <div class="email details">
+         <i class="fas fa-envelope conticon"></i>
+         <br><br>
+         <div class="topic">Email</div> 
+         <div class="text-one">felux@gmail.com</div>
+         </div> 
+    
+      
+   
+</div>
+</section>
+<!-- <section class="contact">
 
    <form action="" method="post">
       <h3>get in touch</h3>
@@ -70,7 +111,7 @@ if(isset($_POST['send'])){
       <input type="submit" value="send message" name="send" class="btn">
    </form>
 
-</section>
+</section> -->
 
 
 

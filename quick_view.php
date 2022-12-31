@@ -27,7 +27,7 @@ include 'components/wishlist_cart.php';
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
-
+   <link rel="stylesheet" href="css/comment.css">
 </head>
 <body>
    
@@ -82,18 +82,30 @@ include 'components/wishlist_cart.php';
    ?>
 
 </section>
+<!-- start add comment -->
+<?php if (isset($_SESSION['user_id'])) {?>
+<section>
+ <div class="add-comment">
+  <h3>Add Your Comment</h3>
+  <form action="" method="POST">
+         <textarea name="comment" ></textarea>
+         <input class="option-btn" type="submit" value="Add Comment">
+  </form>
+  <?php 
+   if($_SERVER['REQUEST_METHOD']=='POST'){
+      echo '<h2 class="comm"> USER COMMENT </h2><br>';
 
-
-
-
-
-
-
-
-
-
-
-
+      echo $_POST['comment'];
+   }
+  ?>
+  </div>
+</div>
+<?php } else {
+ echo 'login to add comment';
+} ?>
+<!-- end add comment -->
+  
+</section>
 
 <?php include 'components/footer.php'; ?>
 

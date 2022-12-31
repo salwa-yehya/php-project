@@ -27,7 +27,14 @@ if(isset($_SESSION['user_id'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+<style>
+.p1{
+   font-size: 2rem;
+   color:var(--light-color);
+}
 
+
+</style>
 </head>
 <body>
    
@@ -35,25 +42,39 @@ if(isset($_SESSION['user_id'])){
 
 <section class="about">
 
-   <div class="row">
+<div>
+   <h1 class="heading"> Our Story  <h1>
+<img src="images/aboutim.jpg"  width="100%" alt="">
+<br><br>
 
-      <div class="image">
-         <img src="images/about-img.svg" alt="">
-      </div>
+<p class="p1">Since 1895, founder Daniel  mastery of crystal cutting has defined the company. His enduring passion for innovation and design has made it the world’s premier jewelry and accessory brand. Today, the family carries on the tradition of delivering extraordinary everyday style to women around the world. </p>
 
-      <div class="content">
-         <h3>why choose us?</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam veritatis minus et similique doloribus? Harum molestias tenetur eaque illum quas? Obcaecati nulla in itaque modi magnam ipsa molestiae ullam consequuntur.</p>
-         <a href="contact.php" class="btn">contact us</a>
-      </div>
+</div>
 
-   </div>
+
 
 </section>
 
+<section class="about">
+  <div class="row">
+
+      <div class="image">
+         <img src="images/aboutimg3.png" alt="">
+      </div>
+
+      <div class="content">
+        
+         <p>Explore our new stores. In 2021, Creative Director Giovanna Engelbert's vision comes to life in our new store concept, with an explosive approach to color, size and styling. Come wonder in our imaginary world, where science and magic meet.</p>
+         <p>Inspired by decades of creative collaborations and expertise, Swarovski opened its first boutique in the 1980s. The world’s fascination with a new brand of jewellery and crystal figurines began. With the introduction of the annual limited-edition Christmas ornament, a new tradition was born for collectors around the world.</p>
+         <p>For over 35 years, felux has captivated the world with unique pieces like the Nirvana cocktail ring, the Slake bracelet and its signature Swiss movement watches. In 2008, the magical 'Crystal Forest' interior design was implemented in stores worldwide, welcoming shoppers to an architectural crystal wonderland.</p>
+         <!-- <a href="contact.php" class="btn">contact us</a> -->
+      </div>
+
+   </div>
+</section>
 <section class="reviews">
    
-   <h1 class="heading">client's reviews</h1>
+   <!-- <h1 class="heading">client's reviews</h1>
 
    <div class="swiper reviews-slider">
 
@@ -141,7 +162,7 @@ if(isset($_SESSION['user_id'])){
 
    <div class="swiper-pagination"></div>
 
-   </div>
+   </div> -->
 
 </section>
 
