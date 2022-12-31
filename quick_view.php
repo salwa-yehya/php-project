@@ -93,8 +93,11 @@ include 'components/wishlist_cart.php';
   </form>
   <?php 
    if($_SERVER['REQUEST_METHOD']=='POST'){
-      echo '<h2 class="comm"> USER COMMENT </h2><br>';
+      echo '<h3 class="comm"> USER COMMENT </h3><br>';
 
+      echo '<h4>Ahmad</h4>';
+      echo '<h4>29-12-2022</h4>';
+      echo '<br>';
       echo $_POST['comment'];
    }
   ?>
