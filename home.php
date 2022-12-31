@@ -10,8 +10,6 @@ if(isset($_SESSION['user_id'])){
    $user_id = '';
 };
 
-include 'components/wishlist_cart.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -88,6 +86,37 @@ include 'components/wishlist_cart.php';
 </section>
 
 </div>
+
+
+<section class="category1">
+
+   <h1 class="title">Category</h1>
+
+   <div class="box-container1">
+
+      <a href="category.php?category=laptop" class="box1">
+         <img src="images\ca r.png" alt="" width="30" height="30">
+         <h3>Rings</h3>
+      </a>
+   
+      <a href="category.php?category=laptop" class="box1">
+         <img src="images\ca b.png" alt="" width="30" height="30">
+         <h3>Bracelets</h3>
+      </a>
+
+      <a href="category.php?category=laptop" class="box1">
+         <img src="images\ca n.png" alt="" width="30" height="30">
+         <h3>Necklace</h3>
+      </a>
+   
+      <a href="category.php?category=laptop" class="box1">
+         <img src="images\ca e.png" alt="" width="30" height="30">
+         <h3>Earrings</h3>
+      </a>
+   
+   </div>
+
+</section>
 
 
 <section class="home-products">
